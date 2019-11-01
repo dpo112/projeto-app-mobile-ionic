@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Funcionário Detalhes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="formGroup">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Matricula:</ion-label>
+          <ion-input formControlName="matricula" value="{{funcionarios.matricula}}" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Nome:</ion-label>
+          <ion-input formControlName="nome" value="{{funcionarios.nome}}" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Salário:</ion-label>
+          <ion-input formControlName="salario" value="{{funcionarios.salario}}" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Cargo:</ion-label>
+            <ion-input formControlName="cargo" value="{{funcionarios.cargo}}" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>E-mail:</ion-label>
+              <ion-input formControlName="email" value="{{funcionarios.email}}" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>CPF:</ion-label>
+              <ion-input formControlName="cpf" value="{{funcionarios.cpf}}" type="text"></ion-input>
+            </ion-item>
+      </ion-list>
+      <ion-button expand="danger" (click)="atualizar()">Atualizar</ion-button>
+      <ion-button color="danger" (click)="confirm()">Excluir</ion-button>
+    </form>
+  </ion-content>
+  

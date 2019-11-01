@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Serviço de atendimento ao Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="formGroup"> <!-- vinculo com a variavel formGroup -->
+    <ion-list>
+      <ion-label floating>Produto</ion-label>
+      <!-- formControlName -> atributo do formgroup -->
+      <ion-input formControlName=produto type=text></ion-input>
+    </ion-list>
+    <ion-list>
+        <ion-label floating>Data</ion-label>
+        <ion-input formControlName=data type=text></ion-input>
+      </ion-list>
+      <ion-list>
+        <ion-label floating>Defeito</ion-label>
+        <ion-input formControlName=defeito type=text></ion-input>
+      </ion-list>
+      <ion-list>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input formControlName=descricao type=text></ion-input>
+      </ion-list>
+      
+        <ion-button expand="full" color="dark" (click)="enviar()">Enviar</ion-button>
+  </form>
+</ion-content>

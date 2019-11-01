@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Cliente Detalhes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="formGroup">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Nome Completo:</ion-label>
+          <ion-input formControlName="nomeCompleto" value="{{cliente.nomeCompleto}}" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Senha:</ion-label>
+            <ion-input formControlName="senha" value="{{cliente.senha}}" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Email:</ion-label>
+              <ion-input formControlName="email" value="{{cliente.email}}" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Data de Nascimento:</ion-label>
+              <ion-input formControlName="dataNascimento" value="{{cliente.dataNascimento}}" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Telefone:</ion-label>
+              <ion-input formControlName="telefone" value="{{cliente.telefone}}" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Cpf:</ion-label>
+              <ion-input formControlName="cpf" value="{{cliente.cpf}}" type="text"></ion-input>
+            </ion-item>
+      </ion-list>
+      <ion-button expand="danger" (click)="atualizar()">Atualizar</ion-button>
+      <ion-button color="danger" (click)="confirm()">Excluir</ion-button>
+    </form>
+  </ion-content>
+  
